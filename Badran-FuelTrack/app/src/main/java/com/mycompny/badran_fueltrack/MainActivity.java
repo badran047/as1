@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class MyActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = " " ;
     private ListView listview;
@@ -28,16 +28,11 @@ public class MyActivity extends AppCompatActivity {
                 R.layout.list_item, entrylist.getEntries());
         listview.setAdapter(adapter);
 
-        /* create test entry */
         Entry test = new Entry();
+        System.out.print(test);
         entrylist.add(test);
         adapter.notifyDataSetChanged();
 
-
-
-        /*
-        * adapter.notifyDataSetChanged();
-        * */
     }
 
     @Override
@@ -47,7 +42,7 @@ public class MyActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        listview = (ListView)findViewById(R.id.oldEntriesList) ;
+        listview = (ListView)findViewById(R.id.oldEntriesList);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

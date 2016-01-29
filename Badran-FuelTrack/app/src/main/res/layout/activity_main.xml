@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.mycompny.badran_fueltrack.MyActivity">
+    tools:context="com.mycompny.badran_fueltrack.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,18 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_my" />
-
-    <ListView
-        android:id="@+id/oldEntriesList"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:scrollbars="vertical">
-
-    </ListView>
-
-
+    <include layout="@layout/content_main2" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
