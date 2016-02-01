@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="badran.fueltrack.EditEntryActivity">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:id="@+id/date"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="false"
+        android:hint="Date"
+        android:clickable="true"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/station"
+        android:hint="Station"
+        android:layout_below="@+id/date"
+        android:layout_alignParentStart="true"
+        android:inputType="text"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/odometer"
+        android:hint="Odometer Reading (km)"
+        android:layout_below="@+id/station"
+        android:layout_alignParentStart="true"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fuel_unit_cost"
+        android:hint="Fuel Unit Cost (cents/L)"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/odometer"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fuel_grade"
+        android:hint="Fuel Grade"
+        android:layout_below="@+id/fuel_unit_cost"
+        android:layout_alignParentStart="true"
+        android:inputType="text"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fuel_amount"
+        android:hint="Fuel Amount (L)"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/fuel_grade"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/save"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="false"/>
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_above="@+id/save"
+        android:layout_alignParentStart="true"/>
+</RelativeLayout>

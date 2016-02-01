@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FuelTrack</string>
+    <string name="title_activity_display_entry">DisplayEntryActivity</string>
+    <string name="title_edit_entry">EditEntry</string>
+    <string name="save">save</string>
+    <string name="delete">delete</string>
+    <string name="add">add</string>
+</resources>
