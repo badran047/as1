@@ -16,7 +16,7 @@ import java.util.Locale;
 /**
  * Created by hasan on 2016-01-30.
  */
-public class DisplayEntryActivity extends ActionBarActivity implements Shared {
+public class DisplayEntryActivity extends ActionBarActivity {
     boolean valid;
     private Context context;
     private EditText dateText;
@@ -28,16 +28,12 @@ public class DisplayEntryActivity extends ActionBarActivity implements Shared {
     private AppController fueltrack = FuelTrackApp.getController();
 
     @Override
-    public void onStartData() {}
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.onCreateSetup();
         this.onCreateListeners();
     }
 
-    @Override
     public void onCreateSetup() {
         setContentView(R.layout.activity_display_entry);
         context = FuelTrackApp.getContext();
@@ -51,7 +47,6 @@ public class DisplayEntryActivity extends ActionBarActivity implements Shared {
         getSupportActionBar().setTitle("Home");
     }
 
-    @Override
     public void onCreateListeners() {
         Button saveButton = (Button)findViewById(R.id.add_edit);
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -63,8 +58,7 @@ public class DisplayEntryActivity extends ActionBarActivity implements Shared {
                 Date date = new Date();
 
                 /* taken from:
-                 * http://stackoverflow.com/questions/4216745/java-string-to-date-conversion
-                 */
+                 * http://stackoverflow.com/questions/4216745/java-string-to-date-conversion */
                 try {
                     date = format.parse(dateString);
 
@@ -90,8 +84,7 @@ public class DisplayEntryActivity extends ActionBarActivity implements Shared {
 
     @Override
     /* taken from:
-     * http://stackoverflow.com/questions/14545139/android-back-button-in-the-title-bar
-     */
+     * http://stackoverflow.com/questions/14545139/android-back-button-in-the-title-bar */
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
         startActivityForResult(myIntent, 0);

@@ -1,10 +1,10 @@
 package badran.fueltrack;
 
 
-import android.support.v7.app.ActionBarActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -59,8 +59,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /* taken from:
-     * http://stackoverflow.com/questions/6439085/android-how-to-create-option-menu
-     */
+     * http://stackoverflow.com/questions/6439085/android-how-to-create-option-menu */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -68,8 +67,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     /* taken from:
-     * http://stackoverflow.com/questions/16896513/avoiding-call-to-oncreate-of-background-activity-by-pressing-back-of-finish-from
-     */
+     * http://stackoverflow.com/questions/16896513/avoiding-call-to-oncreate-of-background-activity-by-pressing-back-of-finish-from */
     @Override
     public void onBackPressed() {
         super.onBackPressed();

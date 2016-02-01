@@ -22,9 +22,17 @@ public class FuelTrackApp extends Application {
         }
     }
 
+    /* create AppController */
+    transient static public AppController controller = null;
+    public static AppController getController() {
+        if (controller == null) {
+            controller = new AppController();
+        }
+        return controller;
+    }
+
     /* taken from:
-     * http://stackoverflow.com/questions/21994612/get-application-context-returns-null
-     */
+     * http://stackoverflow.com/questions/21994612/get-application-context-returns-null */
     public static Context getContext() {
         return appContext;
     }
@@ -34,15 +42,6 @@ public class FuelTrackApp extends Application {
             app = new EntryList();
         }
         return app;
-    }
-
-    /* create AppController */
-    transient static public AppController controller = null;
-    public static AppController getController() {
-        if (controller == null) {
-            controller = new AppController();
-        }
-        return controller;
     }
 
 }

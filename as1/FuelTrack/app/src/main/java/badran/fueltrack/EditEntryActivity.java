@@ -30,8 +30,6 @@ public class EditEntryActivity extends ActionBarActivity {
     private Button saveButton;
     private Button deleteButton;
 
-
-
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,16 +48,14 @@ public class EditEntryActivity extends ActionBarActivity {
         saveButton = (Button)findViewById(R.id.save);
         deleteButton = (Button)findViewById(R.id.delete);
 
-
         saveButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                String dateString = stationText.getText().toString();
+                String dateString = dateText.getText().toString();
 
                 /* taken from:
-                 * http://stackoverflow.com/questions/4216745/java-string-to-date-conversion
-                 */
+                 * http://stackoverflow.com/questions/4216745/java-string-to-date-conversion */
                 DateFormat format = new SimpleDateFormat("yyyy-mm-dd", Locale.ENGLISH);
                 Date date = new Date();
                 try {
@@ -112,8 +108,7 @@ public class EditEntryActivity extends ActionBarActivity {
 
     @Override
     /* taken from:
-     * http://stackoverflow.com/questions/14545139/android-back-button-in-the-title-bar
-     */
+     * http://stackoverflow.com/questions/14545139/android-back-button-in-the-title-bar */
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
         startActivityForResult(myIntent, 0);

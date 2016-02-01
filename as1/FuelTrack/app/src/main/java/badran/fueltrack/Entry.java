@@ -73,8 +73,7 @@ public class Entry {
 
     public double fuelCost() {
         /* taken from:
-         * http://stackoverflow.com/questions/11701399/round-up-to-2-decimal-places-in-java
-         */
+         * http://stackoverflow.com/questions/11701399/round-up-to-2-decimal-places-in-java */
         DecimalFormat f = new DecimalFormat("##.00");
         return Double.parseDouble(f.format(( this.getFuelUnitCost() / 100.0) * (this.getFuelAmount())));
     }

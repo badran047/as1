@@ -22,6 +22,7 @@ import java.util.Date;
 public class AppController implements Controller {
     EntryList app;
     Gson gson;
+
     private static final String FILENAME = "file.sav";
 
     public boolean init() {
@@ -93,8 +94,7 @@ public class AppController implements Controller {
             gson = new Gson();
 
 			/* taken from:
-			 * https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html
-			 */
+			 * https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html */
             Type listType = new TypeToken<ArrayList<Entry>>(){}.getType();
             ArrayList<Entry> tmp;
             tmp = gson.fromJson(in, listType);
